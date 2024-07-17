@@ -6,3 +6,10 @@
  }
 
  console.log(getComputerChoice())
+
+ function getHumanChoice() {
+    humanChoice = prompt()
+    return humanChoice
+ }
+
+console.log(getHumanChoice())
