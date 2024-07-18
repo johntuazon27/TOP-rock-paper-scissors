@@ -12,7 +12,7 @@ function getComputerChoice () {
 
 
 function getHumanChoice() {
-    humanChoice = prompt()
+    let humanChoice = prompt()
     console.log(humanChoice.toUpperCase())
     return humanChoice.toUpperCase()
 }
