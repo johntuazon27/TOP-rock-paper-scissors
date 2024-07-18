@@ -37,4 +37,12 @@ function playRound(humanChoice, computerChoice) {
     console.log(`CURRENT SCORE\nYOU:${humanScore}\nCOMPUTER:${computerScore}`)
 }
 
-playRound(getHumanChoice(), getComputerChoice())
+let isGameOn = true
+while (isGameOn) {
+    playRound(getHumanChoice(), getComputerChoice())
+    let keepPlaying = prompt("Continue playing?: YES or NO")
+    if (keepPlaying.toUpperCase() == "NO"){
+        isGameOn = false
+    }
+} 
+console.log("\n\nTHANK YOU FOR PLAYNG!")
