@@ -5,7 +5,7 @@ let computerScore = 0
 
 function getComputerChoice () {
     const randomIndex = Math.floor(Math.random() * choices.length)
-    console.log(choices[randomIndex])
+    console.log(`COMPUTER CHOSE:${choices[randomIndex]}`)
     return choices[randomIndex]
 }
 
@@ -13,7 +13,7 @@ function getComputerChoice () {
 
 function getHumanChoice() {
     let humanChoice = prompt("PICK ONE BETWEEN: ROCK, PAPER, SCISSORS")
-    console.log(humanChoice.toUpperCase())
+    console.log(`YOU CHOSE: ${humanChoice.toUpperCase()}`)
     return humanChoice.toUpperCase()
 }
 
