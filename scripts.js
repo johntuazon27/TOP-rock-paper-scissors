@@ -12,7 +12,7 @@ function getComputerChoice () {
 
 
 function getHumanChoice() {
-    let humanChoice = prompt()
+    let humanChoice = prompt("PICK ONE BETWEEN: ROCK, PAPER, SCISSORS")
     console.log(humanChoice.toUpperCase())
     return humanChoice.toUpperCase()
 }
