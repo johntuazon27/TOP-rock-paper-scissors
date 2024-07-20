@@ -47,7 +47,7 @@ function playRound(humanChoice, computerChoice) {
 }
 
 function playGame () {
-    playRound(getComputerChoice(), getHumanChoice())
+    playRound(getHumanChoice(), getComputerChoice())
     isGameOn = true
     while(isGameOn){
         let keepPlaying = prompt("Continue playing? [Y] for yes and [N] for no.")
@@ -56,7 +56,7 @@ function playGame () {
         } else if (keepPlaying.toUpperCase() == "N") {
             isGameOn = false
         } else {
-            playRound(getComputerChoice(), getHumanChoice())
+            playRound(getHumanChoice(), getComputerChoice())
         }
     }
     console.log("\n\nTHANK YOU FOR PLAYNG!")
