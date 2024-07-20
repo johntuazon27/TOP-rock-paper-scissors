@@ -15,9 +15,12 @@ function getHumanChoice() {
     let humanChoice = prompt("PICK ONE BETWEEN: ROCK, PAPER, SCISSORS")
     let isCorrectInput = false
     while (isCorrectInput == false) {
-        if (humanChoice.toUpperCase() == "ROCK" || humanChoice.toUpperCase() == "PAPER" || humanChoice.toUpperCase() == "SCISSORS") {
+        if (humanChoice == null) {
+            console.log("WRONG INPUT. PLEASE TRY AGAIN.")
+            humanChoice = prompt("PICK ONE BETWEEN: ROCK, PAPER, SCISSORS")
+        } else if (humanChoice.toUpperCase() == "ROCK" || humanChoice.toUpperCase() == "PAPER" || humanChoice.toUpperCase() == "SCISSORS") {
             isCorrectInput = true
-        } else {
+        }else {
             console.log("WRONG INPUT. PLEASE TRY AGAIN.")
             humanChoice = prompt("PICK ONE BETWEEN: ROCK, PAPER, SCISSORS")
         }
