@@ -46,12 +46,20 @@ function playRound(humanChoice, computerChoice) {
     console.log(`CURRENT SCORE\nYOU:${humanScore}\nCOMPUTER:${computerScore}`)
 }
 
-let isGameOn = true
-while (isGameOn) {
-    playRound(getHumanChoice(), getComputerChoice())
-    let keepPlaying = prompt("Continue playing?: YES or NO")
-    if (keepPlaying.toUpperCase() == "NO"){
-        isGameOn = false
+function playGame () {
+    playRound(getComputerChoice(), getHumanChoice())
+    isGameOn = true
+    while(isGameOn){
+        let keepPlaying = prompt("Continue playing? [Y] for yes and [N] for no.")
+        if ( keepPlaying == "") {
+            console.log("WRONG INPUT. PLEASE TRY AGAIN.")
+        } else if (keepPlaying.toUpperCase() == "N") {
+            isGameOn = false
+        } else {
+            playRound(getComputerChoice(), getHumanChoice())
+        }
     }
-} 
-console.log("\n\nTHANK YOU FOR PLAYNG!")
+    console.log("\n\nTHANK YOU FOR PLAYNG!")
+}
+
+playGame()
