@@ -51,7 +51,7 @@ function playGame () {
     isGameOn = true
     while(isGameOn){
         let keepPlaying = prompt("Continue playing? [Y] for yes and [N] for no.")
-        if ( keepPlaying == "") {
+        if ( keepPlaying == null || (keepPlaying.toUpperCase() != "N" && keepPlaying.toUpperCase() != "Y")) {
             console.log("WRONG INPUT. PLEASE TRY AGAIN.")
         } else if (keepPlaying.toUpperCase() == "N") {
             isGameOn = false
